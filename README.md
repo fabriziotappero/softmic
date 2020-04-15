@@ -26,17 +26,27 @@ root
 └───tmp                     generic data sheets and additional info
 ```
 ## Starting point
-I own a [Samson C02](https://www.amazon.com/s?k=samsons+c02&ref=nb_sb_noss_2) condenser
+I actually own a [Samson C02](https://www.amazon.com/s?k=samsons+c02) condenser
 microphone that I use together with a [Tascam DR-40](https://www.amazon.com/s?k=tascam+dr-40).
-
-[Here](https://soundcloud.com/cinema_sound/samson-c02-dx-pop-filter) an example of what the Samson C02 sounds like and here is the picture of the inside of the Samson C02.
+[Here](https://soundcloud.com/cinema_sound/samson-c02-dx-pop-filter) an example of what the Samson C02 sounds like 
+and here is the picture of the inside of the Samson C02.
 
 <p align="center">
   <img src="https://github.com/fabriziotappero/softmic/blob/master/img/samson-c02.jpg?raw=true" alt="" width="90%"/>
 </p>
-And you can see the actual schematic of the Samson C02.
+Here you can see the actual schematic of the Samson C02. Nothing really mind-blowing but functional.
 <p align="center">
   <img src="https://github.com/fabriziotappero/softmic/blob/master/img/samson-c02-schematic.jpg?raw=true" alt="" width="90%"/>
+</p>
+
+For the time being this is the starting point of this project. The objective of this project is to make something of a 
+similar quality but wireless.
+
+## Schematics
+In the following figure you can see the KiCad schematic of softmic done in KiCad.
+
+<p align="center">
+  <img src="https://github.com/fabriziotappero/softmic/blob/master/img/softmic-schematic.jpg?raw=true" alt="" width="90%"/>
 </p>
 
 ## Mechanical Parts
@@ -48,7 +58,6 @@ using [Blender](https://www.blender.org) version 2.8.
 For a quick start have a look at this [great tutorial](https://www.youtube.com/watch?v=WzwmkYhlrcQ).
 
 ## License
-
 Copyright (c) 2020 Fabrizio Tappero
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
