@@ -1,0 +1,429 @@
+* OPA1671 - Rev. A
+* Created by Ian Williams; December 15, 2018
+* Created with Green-Williams-Lis Op Amp Macro-model Architecture
+* Copyright 2018 by Texas Instruments Corporation
+******************************************************
+* MACRO-MODEL SIMULATED PARAMETERS:
+******************************************************
+* OPEN-LOOP GAIN AND PHASE VS. FREQUENCY  WITH RL, CL EFFECTS (Aol)
+* UNITY GAIN BANDWIDTH (GBW)
+* INPUT COMMON-MODE REJECTION RATIO VS. FREQUENCY (CMRR)
+* POWER SUPPLY REJECTION RATIO VS. FREQUENCY (PSRR)
+* DIFFERENTIAL INPUT IMPEDANCE (Zid)
+* COMMON-MODE INPUT IMPEDANCE (Zic)
+* OPEN-LOOP OUTPUT IMPEDANCE VS. FREQUENCY (Zo)
+* OUTPUT CURRENT THROUGH THE SUPPLY (Iout)
+* INPUT VOLTAGE NOISE DENSITY VS. FREQUENCY (en)
+* INPUT CURRENT NOISE DENSITY VS. FREQUENCY (in)
+* OUTPUT VOLTAGE SWING vs. OUTPUT CURRENT (Vo)
+* SHORT-CIRCUIT OUTPUT CURRENT (Isc)
+* QUIESCENT CURRENT (Iq)
+* SETTLING TIME VS. CAPACITIVE LOAD (ts)
+* SLEW RATE (SR)
+* SMALL SIGNAL OVERSHOOT VS. CAPACITIVE LOAD
+* LARGE SIGNAL RESPONSE
+* OVERLOAD RECOVERY TIME (tor)
+* INPUT BIAS CURRENT (Ib)
+* INPUT OFFSET CURRENT (Ios)
+* INPUT OFFSET VOLTAGE (Vos)
+* INPUT OFFSET VOLTAGE VS. TEMPERATURE (Vos Drift)
+* INPUT COMMON-MODE VOLTAGE RANGE (Vcm)
+* INPUT OFFSET VOLTAGE VS. INPUT COMMON-MODE VOLTAGE (Vos vs. Vcm)
+* INPUT/OUTPUT ESD CELLS (ESDin, ESDout)
+******************************************************
+.subckt OPA1671 IN+ IN- VCC VEE OUT
+******************************************************
+.model                    R_NOISELESS RES (T_ABS=-273.15)                     
+C_C10                     MID N42834 1e-15
+C_C11                     N44757 MID 1e-15
+C_C12                     MID N45892 1e-15
+C_C13                     N45974 MID 1e-15
+C_C14                     MID N56659 1e-15
+C_C15                     N56721 MID 1e-15
+C_C16                     MID N61579 1e-15
+C_C17                     MID N68747 1e-12
+C_C18                     MID N68594 1e-12
+C_C19                     MID SW_OL 1e-12
+C_C1a1                    N701935 N701965 1.83e-13
+C_C1a3                    N704975 N705005 1.91e-12
+C_C1a4                    N709083 N709113 2.03e-12
+C_C1a8                    N725398 N725428 2.17e-6
+C_C1b1                    MID N725694 1.14e-12
+C_C1c2                    N725214 N725836 1.68e-14
+C_C1d1                    MID N725708 3.12e-14
+C_C2                      MID N694641 1.99e-15
+C_C20                     CLAMP MID 1.82e-8
+C_C3                      MID N694487 1.59e-15
+C_C33                     N406634 0 1e-15
+C_C34                     N317950 0 1
+C_C35                     N406794 0 1e-15
+C_C7                      N31014 MID 1e-15
+C_C8                      MID N35813 1e-15
+C_C9                      MID N38096 1e-15
+C_C_CMn                   MID ESDN 2.5e-12
+C_C_CMp                   ESDP MID 2.5e-12
+C_C_DIFF                  ESDN ESDP 6e-12
+C_C_VCLP                  VCLP MID 1e-12
+C_C_VIMON                 MID VIMON 1e-9
+C_C_VOUT_S                MID VOUT_S 1e-9
+E_E2                      N91498 MID CL_CLAMP MID 1
+E_E3                      N112292 MID OUT MID 1
+E_E6                      MID 0 N317950 0 1
+G_G10                     N73852 MID N55875 MID -1
+G_G11                     N55050 MID N56119 MID -1
+G_G12                     VSENSE MID CLAMP MID -1e-3
+G_G15                     CLAW_CLAMP MID N694487 MID -1e-3
+G_G16                     CL_CLAMP MID CLAW_CLAMP MID -1e-3
+G_G19                     N725542 MID N725428 MID -4.01
+G_G2                      N10570 N10561 N701965 MID -1e-3
+G_G36                     VCC_B 0 VCC 0 -1
+G_G37                     VEE_B 0 VEE 0 -1
+G_G4                      N704975 MID VEE_B MID -3.79e-1
+G_G54                     N694641 MID VSENSE MID -1e-6
+G_G55                     N701935 MID ESDP MID -1.82e-1
+G_G56                     N709083 MID VCC_B MID -4.03e-1
+G_G57                     N725398 MID CL_CLAMP N516723 -88.9
+G_G6                      N25816 N11984 N709113 N705005 -1e-3
+G_G7                      N694487 MID N694641 MID -1e-6
+G_G8                      VCC_CLP MID N35813 MID -1E-3
+G_G9                      VEE_CLP MID N38096 MID -1E-3
+G_Gb1                     N725346 MID N725670 MID -1
+G_Gd4                     N725214 MID N725574 MID -1
+I_I_B                     N06456 MID DC 1e-12
+I_I_OS                    ESDN MID DC 1e-15
+I_I_Q                     VCC VEE DC 940e-6
+R_R1                      ESDP IN+ R_NOISELESS 10e-3
+R_R10                     ESDN N11991 R_NOISELESS 1e-3
+R_R107                    VCC_B 0 R_NOISELESS 1
+R_R108                    N317950 0 R_NOISELESS 1e12
+R_R109                    VEE_B 0 R_NOISELESS 1
+R_R11                     MID N725346 R_NOISELESS 1
+R_R110                    VCC_B N406634 R_NOISELESS 1e-3
+R_R111                    N406634 N317950 R_NOISELESS 1e6
+R_R112                    N317950 N406794 R_NOISELESS 1e6
+R_R113                    N406794 VEE_B R_NOISELESS 1e-3
+R_R133                    N694487 MID R_NOISELESS 1e6
+R_R134                    N694641 MID R_NOISELESS 1e6
+R_R135                    N701935 MID R_NOISELESS 1
+R_R136                    N704975 MID R_NOISELESS 1
+R_R137                    MID N725398 R_NOISELESS 1
+R_R138                    MID N725542 R_NOISELESS 1
+R_R139                    MID N725214 R_NOISELESS 1
+R_R140                    MID N725936 R_NOISELESS 1
+R_R1a1                    N701935 N701965 R_NOISELESS 1e8
+R_R1a3                    N704975 N705005 R_NOISELESS 1e8
+R_R1a4                    N709083 N709113 R_NOISELESS 1e8
+R_R1a9                    N725428 N725398 R_NOISELESS 1e4
+R_R1b1                    N725694 N725670 R_NOISELESS 1e4
+R_R1c2                    N725836 N725214 R_NOISELESS 1e4
+R_R1d1                    N725708 N725574 R_NOISELESS 1e4
+R_R2                      ESDN IN- R_NOISELESS 10e-3
+R_R21                     N11984 N25816 R_NOISELESS 1e3
+R_R25                     MID N28602 R_NOISELESS 1e9
+R_R26                     N30136 MID R_NOISELESS 1e9
+R_R27                     MID N30913 R_NOISELESS 1
+R_R28                     N31014 N30913 R_NOISELESS 1e-3
+R_R29                     N35669 VCC_B R_NOISELESS 1e3
+R_R2a1                    N701965 MID R_NOISELESS 8.7e3
+R_R2a3                    N705005 MID R_NOISELESS 8.35e3
+R_R2a4                    N709113 MID R_NOISELESS 7.84e3
+R_R2a9                    MID N725428 R_NOISELESS 3.32e3
+R_R2b1                    N725670 N725542 R_NOISELESS 1.67e3
+R_R2c2                    MID N725836 R_NOISELESS 95.9
+R_R2d1                    N725574 N725346 R_NOISELESS 2.4e4
+R_R3                      MID ESDP R_NOISELESS 1e12
+R_R30                     N35813 N35669 R_NOISELESS 1e-3
+R_R31                     VCC_CLP MID R_NOISELESS 1e3
+R_R32                     N38050 VEE_B R_NOISELESS 1e3
+R_R33                     N38096 N38050 R_NOISELESS 1e-3
+R_R34                     VEE_CLP MID R_NOISELESS 1e3
+R_R35                     MID VCC_CLP R_NOISELESS 1e9
+R_R36                     N42663 MID R_NOISELESS 1
+R_R37                     N42834 N42663 R_NOISELESS 1e-3
+R_R38                     N44757 N44799 R_NOISELESS 1e-3
+R_R39                     MID N44799 R_NOISELESS 1
+R_R4                      ESDN MID R_NOISELESS 1e12
+R_R40                     MID VEE_CLP R_NOISELESS 1e9
+R_R41                     MID N50645 R_NOISELESS 1e9
+R_R42                     N45856 MID R_NOISELESS 1
+R_R43                     N45892 N45856 R_NOISELESS 1e-3
+R_R44                     N45974 N45986 R_NOISELESS 1e-3
+R_R45                     MID N45986 R_NOISELESS 1
+R_R46                     MID N48550 R_NOISELESS 1e9
+R_R47                     MID N73852 R_NOISELESS 1
+R_R48                     MID N55050 R_NOISELESS 1
+R_R49                     MID N56919 R_NOISELESS 1e9
+R_R5                      N709083 MID R_NOISELESS 1
+R_R50                     N56635 MID R_NOISELESS 1
+R_R51                     N56659 N56635 R_NOISELESS 1e-3
+R_R52                     N56721 N56733 R_NOISELESS 1e-3
+R_R53                     MID N56733 R_NOISELESS 1
+R_R54                     MID N56891 R_NOISELESS 1e9
+R_R55                     N61579 VSENSE R_NOISELESS 1e-3
+R_R56                     N68747 OLN R_NOISELESS 100
+R_R57                     N68594 OLP R_NOISELESS 100
+R_R58                     N69264 MID R_NOISELESS 1
+R_R59                     N69264 SW_OL R_NOISELESS 100
+R_R60                     MID AOL_1 R_NOISELESS 1e6
+R_R61                     MID CLAMP R_NOISELESS 1e6
+R_R62                     MID VSENSE R_NOISELESS 1e3
+R_R65                     MID CLAW_CLAMP R_NOISELESS 1e3
+R_R66                     MID CL_CLAMP R_NOISELESS 1e3
+R_R8                      N10561 N10570 R_NOISELESS 1e3
+R_R81                     MID N110431 R_NOISELESS 1e9
+R_R83                     MID N112292 R_NOISELESS 1e9
+R_R9                      N10570 N11984 R_NOISELESS 1e-3
+R_R_VCLP                  N91498 VCLP R_NOISELESS 100
+R_R_VIMON                 VIMON N110431 R_NOISELESS 100
+R_R_VOUT_S                VOUT_S N112292 R_NOISELESS 100
+R_Rdummy                  MID N516723 R_NOISELESS 3.16e3
+R_Rx                      N516723 N725936 R_NOISELESS 3.16e4
+V_V_GRN                   N56891 MID -23
+V_V_GRP                   N56919 MID 26
+V_V_ISCN                  N48550 MID -53.7
+V_V_ISCP                  N50645 MID 64
+V_V_ORN                   N55875 VCLP -1.75
+V_V_ORP                   N56119 VCLP 1.75
+V_VCM_MAX                 N30136 VCC_B 0
+V_VCM_MIN                 N28602 VEE_B 0
+X_AOL_1_OPA1671           N31014 N11991 MID AOL_1 AOL_1_OPA1671
+X_AOL_2_OPA1671           AOL_1 MID MID CLAMP AOL_2_OPA1671
+X_CL_AMP_OPA1671          N50645 N48550 VIMON MID N45856 N45986 CLAMP_AMP_LO_OPA1671
+X_CL_SRC_OPA1671          N45892 N45974 CL_CLAMP MID CL_SRC_OPA1671
+X_CLAW_AMP_OPA1671        VCC_CLP VEE_CLP VOUT_S MID N42663 N44799 CLAMP_AMP_LO_OPA1671
+X_CLAW_SRC_OPA1671        N42834 N44757 CLAW_CLAMP MID CLAW_SRC_OPA1671
+X_CLAWN_OPA1671           MID VIMON VEE_B N38050 CLAWN_OPA1671
+X_CLAWP_OPA1671           VIMON MID N35669 VCC_B CLAWP_OPA1671
+X_e_n_OPA1671             ESDP N06456 VNSE_OPA1671
+X_ESD_IN_OPA1671          ESDN ESDP VCC VEE ESD_IN_OPA1671
+X_ESD_OUT_OPA1671         OUT VCC VEE ESD_OUT_OPA1671
+X_GR_AMP_OPA1671          N56919 N56891 N61579 MID N56635 N56733 CLAMP_AMP_HI_OPA1671
+X_GR_SRC_OPA1671          N56659 N56721 CLAMP MID GR_SRC_OPA1671
+X_H1_OPA1671              N73852 N166377 OLN MID H1_OPA1671
+X_H2_OPA1671              N55050 N166817 OLP MID H2_OPA1671
+X_H3_OPA1671              OUT N516723 N110431 MID H3_OPA1671
+X_i_nn_OPA1671            ESDN MID FEMT_OPA1671
+X_i_np_OPA1671            N06456 MID FEMT_OPA1671
+X_IQ_N_OPA1671            MID VIMON MID VEE IQ_SRC_OPA1671
+X_IQ_P_OPA1671            VIMON MID VCC MID IQ_SRC_OPA1671
+X_OL_SENSE_OPA1671        MID N69264 N68747 N68594 OL_SENSE_OPA1671
+X_SW_OL_OPA1671           SW_OL MID N725398 N725428 SW_OL_OPA1671
+X_SW_OR_OPA1671           CLAMP N166377 N166817 SW_OR_OPA1671
+X_VCM_CLAMP_OPA1671       N25816 MID N30913 MID N30136 N28602 VCM_CLAMP_OPA1671
+X_VOS_DRIFT_OPA1671       N749288 N06456 VOS_DRIFT_OPA1671
+X_VOS_VS_VCM_OPA1671      N10561 N749288 VCC VEE VOS_VS_VCM_OPA1671
+X_ZO_SRC_OPA1671          N725836 MID MID N725936 ZO_SRC_OPA1671
+.ends
+*$
+*
+.subckt H1_OPA1671 1 2 3 4
+H_H1         3 4 VH_H1 1
+VH_H1         1 2 0V
+.ends
+*$
+*
+.subckt H2_OPA1671 1 2 3 4
+H_H2         3 4 VH_H2 -1
+VH_H2         1 2 0V
+.ends
+*$
+*
+.subckt H3_OPA1671 1 2 3 4
+H_H3         3 4 VH_H3 -1e3
+VH_H3         1 2 0V
+.ends
+*$
+*
+.subckt AOL_1_OPA1671 VC+ VC- IOUT+ IOUT-
+.param Gain = 1e-4
+.param Ipos = .5
+.param Ineg = -.5
+G1 IOUT+ IOUT- VALUE={LIMIT(Gain*V(VC+,VC-),Ineg,Ipos)}
+.ends
+*$
+*
+.subckt AOL_2_OPA1671 VC+ VC- IOUT+ IOUT-
+.param Gain = 1.83e-2
+.param Ipos = 9.45e-2
+.param Ineg = -9.45e-2
+G1 IOUT+ IOUT- VALUE={LIMIT(Gain*V(VC+,VC-),Ineg,Ipos)}
+.ends
+*$
+*
+.subckt CLAMP_AMP_HI_OPA1671 VC+ VC- VIN COM VO+ VO-
+.param G=10
+GVo+ COM Vo+ Value = {IF(V(VIN,COM)>V(VC+,COM),((V(VIN,COM)-V(VC+,COM))*G),0)}
+GVo- COM Vo- Value = {IF(V(VIN,COM)<V(VC-,COM),((V(VC-,COM)-V(VIN,COM))*G),0)}
+.ends
+*$
+*
+.subckt CLAMP_AMP_LO_OPA1671 VC+ VC- VIN COM VO+ VO-
+.param G=1
+GVo+ COM Vo+ Value = {IF(V(VIN,COM)>V(VC+,COM),((V(VIN,COM)-V(VC+,COM))*G),0)}
+GVo- COM Vo- Value = {IF(V(VIN,COM)<V(VC-,COM),((V(VC-,COM)-V(VIN,COM))*G),0)}
+.ends
+*$
+*
+.subckt CLAWn_OPA1671 VC+ VC- IOUT+ IOUT-
+G1 IOUT+ IOUT- TABLE {(V(VC+,VC-))} =
++(0, 7e-5)
++(20.5, 7e-5)
++(32, 1.78e-4)
++(37.5, 3.49e-4)
++(40, 4.51e-4)
++(46, 7.51e-4)
++(50, 1.06e-3)
++(51, 1.15e-3)
++(52, 1.34e-3)
++(53.7, 2.75e-3)
+.ends
+*$
+*
+.subckt CLAWp_OPA1671 VC+ VC- IOUT+ IOUT-
+G1 IOUT+ IOUT- TABLE {(V(VC+,VC-))} =
++(0, 1e-5)
++(20.5, 2.78e-5)
++(30, 9.14e-5)
++(35, 1.27e-4)
++(40, 2.83e-4)
++(50, 6.74e-4)
++(55, 9.4e-4)
++(60, 1.34e-3)
++(62.5, 1.72e-3)
++(64, 2.75e-3)
+.ends
+*$
+*
+.subckt CLAW_SRC_OPA1671 VC+ VC- IOUT+ IOUT-
+.param Gain = 1
+.param Ipos = 5.24e-2
+.param Ineg = -4.59e-2
+G1 IOUT+ IOUT- VALUE={LIMIT(Gain*V(VC+,VC-),Ineg,Ipos)}
+.ends
+*$
+*
+.subckt CL_SRC_OPA1671 VC+ VC- IOUT+ IOUT-
+.param Gain = 1
+.param Ipos = 1.05e-1
+.param Ineg = -9.19e-2
+G1 IOUT+ IOUT- VALUE={LIMIT(Gain*V(VC+,VC-),Ineg,Ipos)}
+.ends
+*$
+*
+.subckt ESD_IN_OPA1671 ESDn ESDp VCC VEE
+.model ESD_SW VSWITCH(Ron=50 Roff=1e12 Von=500e-3 Voff=450e-3)
+S1 VCC ESDn ESDn VCC ESD_SW
+S2 VCC ESDp ESDp VCC ESD_SW
+S3 ESDn VEE VEE ESDn ESD_SW
+S4 ESDp VEE VEE ESDp ESD_SW
+.ends
+*$
+*
+.subckt ESD_OUT_OPA1671 OUT VCC VEE
+.model ESD_SW VSWITCH(Ron=50 Roff=1e12 Von=500e-3 Voff=450e-3)
+S1 VCC OUT OUT VCC ESD_SW
+S2 OUT VEE VEE OUT ESD_SW
+.ends
+*$
+*
+.subckt FEMT_OPA1671 1 2
+.param NVRF=4.75
+.param RNVF={1.184*PWR(NVRF,2)}
+E1 3 0 5 0 10
+R1 5 0 {RNVF}
+R2 5 0 {RNVF}
+G1 1 2 3 0 1e-6
+.ends
+*$
+*
+.subckt GR_SRC_OPA1671 VC+ VC- IOUT+ IOUT-
+.param Gain = 1
+.param Ipos = 0.189
+.param Ineg = -0.189
+G1 IOUT+ IOUT- VALUE={LIMIT(Gain*V(VC+,VC-),Ineg,Ipos)}
+.ends
+*$
+*
+.subckt IQ_SRC_OPA1671 VC+ VC- IOUT+ IOUT-
+.param Gain = 1e-3
+G1 IOUT+ IOUT- VALUE={IF( (V(VC+,VC-)<=0),0,Gain*V(VC+,VC-) )}
+.ends
+*$
+*
+.subckt OL_SENSE_OPA1671 1 2 3 4
+GSW+ 1 2 Value = {IF((V(3,1)>10e-3 | V(4,1)>10e-3),1,0)}
+.ends
+*$
+*
+.subckt SW_OL_OPA1671 SW_OL MID CAP_L CAP_R
+.model OL_SW VSWITCH(Ron=1e-3 Roff=1e9 Von=900e-3 Voff=800e-3)
+S1 CAP_L CAP_R SW_OL MID OL_SW
+.ends
+*$
+*
+.subckt SW_OR_OPA1671 CLAMP OLN OLP
+.model OR_SW VSWITCH(Ron=10e-3 Roff=1e9 Von=10e-3 Voff=0)
+S1 OLP CLAMP CLAMP OLP OR_SW
+S2 CLAMP OLN OLN CLAMP OR_SW
+.ends
+*$
+*
+.subckt VCM_CLAMP_OPA1671 VIN+ VIN- IOUT- IOUT+ VP+ VP-
+.param Gain = 1
+G1 IOUT+ IOUT- VALUE={LIMIT(Gain*V(VIN+,VIN-),V(VP-,VIN-), V(VP+,VIN-))}
+.ends
+*$
+*
+.subckt VNSE_OPA1671 1 2
+.param FLW=0.1
+.param NLF=560
+.param NVR=3.36
+.param GLF={PWR(FLW,0.25)*NLF/1164}
+.param RNV={1.184*PWR(NVR,2)}
+.model DVN D KF={PWR(FLW,0.5)/1E11} IS=1.0E-16
+I1 0 7 10E-3
+I2 0 8 10E-3
+D1 7 0 DVN
+D2 8 0 DVN
+E1 3 6 7 8 {GLF}
+R1 3 0 1E9
+R2 3 0 1E9
+R3 3 6 1E9
+E2 6 4 5 0 10
+R4 5 0 {RNV}
+R5 5 0 {RNV}
+R6 3 4 1E9
+R7 4 0 1E9
+E3 1 2 3 4 1
+.ends
+*$
+*
+.subckt VOS_DRIFT_OPA1671 VOS+ VOS-
+.param DC = 76.1e-6
+.param POL = 1
+.param DRIFT = 0.3e-6
+E1 VOS+ VOS- VALUE={DC+POL*DRIFT*(TEMP-27)}
+.ends
+*$
+*
+.subckt VOS_VS_VCM_OPA1671 V+ V- REF+ REF-
+E1 V+ 1 TABLE {(V(REF+, V-))} =
++(0.35, 450e-6)
++(0.4, 435e-6)
++(0.55, 275e-6)
++(0.65, 150e-6)
++(0.75, 75e-6)
++(0.85, 25e-6)
++(1, 0)
+V1 1 V- 0
+.ends
+*$
+*
+.subckt ZO_SRC_OPA1671 VC+ VC- IOUT+ IOUT-
+.param Gain = 105
+.param Ipos = 4.04e3
+.param Ineg = -3.39e3
+G1 IOUT+ IOUT- VALUE={LIMIT(Gain*V(VC+,VC-),Ineg,Ipos)}
+.ends
+*$
+*

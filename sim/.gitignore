@@ -1,0 +1,7 @@
+
+# LTSpice gitignore
+*.log
+*.op.raw
+*.raw
+
+

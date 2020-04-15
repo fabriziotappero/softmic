@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name BQ21040)(type Legacy)(uri ${KIPRJMOD}/lib/BQ21040.lib)(options "")(descr ""))
+  (lib (name MCP1812BT-033-TT)(type Legacy)(uri ${KIPRJMOD}/lib/MCP1812BT-033-TT.lib)(options "")(descr ""))
+  (lib (name MCP2221A)(type Legacy)(uri ${KIPRJMOD}/lib/MCP2221A.lib)(options "")(descr ""))
+  (lib (name NC3MAAH-1)(type Legacy)(uri ${KIPRJMOD}/lib/NC3MAAH-1.lib)(options "")(descr ""))
+  (lib (name OLED_0.91_128_32)(type Legacy)(uri ${KIPRJMOD}/lib/OLED_0.91_128_32.lib)(options "")(descr ""))
+  (lib (name OPA1671)(type Legacy)(uri ${KIPRJMOD}/lib/OPA1671.lib)(options "")(descr ""))
+)
