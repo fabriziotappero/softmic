@@ -39,20 +39,19 @@ I actually own a [Samson C02](https://www.amazon.com/s?k=samsons+c02) condenser
 microphone that I use together with a [Tascam DR-40](https://www.amazon.com/s?k=tascam+dr-40).
 [Here](https://soundcloud.com/cinema_sound/samson-c02-dx-pop-filter) 
 an example of what the Samson C02 sounds like 
-and here is the picture of the inside of the Samson C02.
+and following, the picture of the inside of my Samson C02.
 
 <p align="center">
   <img src="https://github.com/fabriziotappero/softmic/blob/master/img/samson-c02.jpg?raw=true" alt="" width="90%"/>
 </p>
-Here you can see the actual schematic of the Samson C02. Nothing really 
-mind-blowing but functional.
+Here you can see the actual schematic of the Samson C02 (courtesy of *the Internet*). 
+Nothing really mind-blowing but functional.
 <p align="center">
   <img src="https://github.com/fabriziotappero/softmic/blob/master/img/samson-c02-schematic.jpg?raw=true" alt="" width="90%"/>
 </p>
 
 For the time being this is the starting point of this project. The objective of 
-this project is to make something of a 
-similar quality but wireless.
+this project is to make something of a similar quality but *software-oriented*.
 
 ## Microphone Capsule
 This microphone is designed to function with an **electret capsule** similar to the
@@ -63,26 +62,51 @@ a simpler electret capsule without FET (e.g. the
 Samson C02) will be possible too.
 
 ## Microphone System Design
-Here a list of features of this microphone.
+Let us see a detailed list of features of this microphone. Some of these features
+are still unimplemented.
 
-The microphone should have a standard XLR balanced audio output from which the
-microphone can get powered (standard phantom power supply).
+1. The microphone uses a standard **electret microphone capsule** with a standard 
+ internal FET. The use of a electret microphone without FET is possible too.
 
-Additionally, this microphone will have a Bluetooth/WiFi output so that it can 
-be wirelessly connected to a camera, smartphone or PC. Multiple microphone use is
-envisioned but for the moment not discussed here.
+2. a traditional 3.5mm stereo headphone jack output (unbalanced line out) allows 
+the microphone to be connected to a pair of standard headphones for monitoring 
+purposes.
 
-The microphone has an internal 1-cell lithium battery capable of powering 
-the microphone for approximately 10h. This battery is rechargeable via a USB-C 
-connector or by the XLR phantom power.
+3. A standard XLR connector offers a balanced audio output. This allows this
+microphone to be interfaced with any traditional audio equipment.
 
-At last, the microphone is equipped with a fairly powerful dual-core
-processor re-programmable over the WiFi connection. On-board programming is done 
-in [Micropython](https://micropython.org/).
+4. When provided externally via the XLR connector, phantom power can power the 
+microphone. (UNIMPLEMENTED)
 
-To ease connectivity with other accessories the microphone is equipped with 
-one-does-it-all connector and an additional spring connector similar to the 
-[Coda Systems PCB sprint connector](img/codaSystemsSpringConn.jpg).
+5. A Bluetooth/WiFi output allows to connect without cables to a camera, 
+smartphone or PC.
+
+6. When using Bluetooth/WiFi, multiple microphones can be all connected among
+them. (UNIMPLEMENTED)
+
+7. An internal 1-cell lithium battery can power the microphone for approximately
+10h. This battery is rechargeable via a USB-C connector.
+
+4. When provided externally via the XLR connector, phantom power can recharge the 
+internal lithium battery. (UNIMPLEMENTED)
+
+8. The microphone is equipped with a fairly powerful dual-core
+processor re-programmable over the WiFi connection or over USB-C. The processor
+programming is done in [Micropython](https://micropython.org/).
+
+9. To ease connectivity with other accessories the microphone is equipped
+with one-does-it-all small multi-pin connector. (UNIMPLEMENTED)
+
+10. A spring connector similar to the 
+[Coda Systems PCB sprint connector](img/codaSystemsSpringConn.jpg) allows the 
+microphone to be connected to or power other accessories. (UNIMPLEMENTED)
+
+11. A small LCD outputs all necessary microphone information.
+
+12. Few push buttons allow to interact with the microphone.
+
+13. The internal ESP32 dual-core processor allows the realtime processing of the
+audio signal coming in. (UNIMPLEMENTED)
 
 ## Circuit Schematics
 In the following figure you can see the KiCad schematic of softmic done in KiCad.
