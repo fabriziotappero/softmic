@@ -1535,10 +1535,7 @@ F 12 "$0.023475" H 900 6800 50  0001 C CNN "LCSC Price"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	750  6550 900  6550
-Wire Wire Line
 	900  6650 900  6550
-Connection ~ 900  6550
 Wire Wire Line
 	900  6550 1050 6550
 Wire Wire Line
@@ -1945,13 +1942,13 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR01
 U 1 1 5E8C4DF2
-P 750 6550
-F 0 "#PWR01" H 750 6400 50  0001 C CNN
-F 1 "+5V" V 700 6550 50  0000 C CNN
-F 2 "" H 750 6550 50  0001 C CNN
-F 3 "" H 750 6550 50  0001 C CNN
-	1    750  6550
-	0    -1   1    0   
+P 750 6150
+F 0 "#PWR01" H 750 6000 50  0001 C CNN
+F 1 "+5V" H 800 6300 50  0000 C CNN
+F 2 "" H 750 6150 50  0001 C CNN
+F 3 "" H 750 6150 50  0001 C CNN
+	1    750  6150
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	8050 2600 8050 2750
@@ -2665,4 +2662,75 @@ Wire Wire Line
 	8000 1300 8000 1550
 Wire Wire Line
 	7500 1300 8000 1300
+$Comp
+L Connector:TestPoint P?
+U 1 1 5E9C020B
+P 950 6200
+F 0 "P?" H 950 6250 50  0001 L CNN
+F 1 "4V1" V 1050 6200 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1150 6200 50  0001 C CNN
+F 3 "~" H 1150 6200 50  0001 C CNN
+F 4 "none" H 950 6200 50  0001 C CNN "Manufacturer"
+F 5 "none" H -2350 1900 50  0001 C CNN "MPN"
+F 6 "none" H 950 6200 50  0001 C CNN "Description"
+F 7 "none" H -2350 1900 50  0001 C CNN "Digikey PN"
+F 8 "none" H -2350 1900 50  0001 C CNN "Digikey Price"
+F 9 "none" H -2350 1900 50  0001 C CNN "Mouser PN"
+F 10 "none" H -2350 1900 50  0001 C CNN "Mouser Price"
+F 11 "none" H -2350 1900 50  0001 C CNN "LCSC PN"
+F 12 "none" H -2350 1900 50  0001 C CNN "LCSC Price"
+	1    950  6200
+	-1   0    0    1   
+$EndComp
+Text Label 950  6050 3    50   ~ 0
+BATT
+Wire Wire Line
+	950  6200 950  6050
+$Comp
+L Connector:TestPoint P?
+U 1 1 5E9EA033
+P 750 6200
+F 0 "P?" H 750 6250 50  0001 L CNN
+F 1 "4V1" V 850 6200 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 950 6200 50  0001 C CNN
+F 3 "~" H 950 6200 50  0001 C CNN
+F 4 "none" H 750 6200 50  0001 C CNN "Manufacturer"
+F 5 "none" H -2550 1900 50  0001 C CNN "MPN"
+F 6 "none" H 750 6200 50  0001 C CNN "Description"
+F 7 "none" H -2550 1900 50  0001 C CNN "Digikey PN"
+F 8 "none" H -2550 1900 50  0001 C CNN "Digikey Price"
+F 9 "none" H -2550 1900 50  0001 C CNN "Mouser PN"
+F 10 "none" H -2550 1900 50  0001 C CNN "Mouser Price"
+F 11 "none" H -2550 1900 50  0001 C CNN "LCSC PN"
+F 12 "none" H -2550 1900 50  0001 C CNN "LCSC Price"
+	1    750  6200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:TestPoint P?
+U 1 1 5E9F84C4
+P 850 6450
+F 0 "P?" H 850 6500 50  0001 L CNN
+F 1 "4V1" V 950 6450 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 1050 6450 50  0001 C CNN
+F 3 "~" H 1050 6450 50  0001 C CNN
+F 4 "none" H 850 6450 50  0001 C CNN "Manufacturer"
+F 5 "none" H -2450 2150 50  0001 C CNN "MPN"
+F 6 "none" H 850 6450 50  0001 C CNN "Description"
+F 7 "none" H -2450 2150 50  0001 C CNN "Digikey PN"
+F 8 "none" H -2450 2150 50  0001 C CNN "Digikey Price"
+F 9 "none" H -2450 2150 50  0001 C CNN "Mouser PN"
+F 10 "none" H -2450 2150 50  0001 C CNN "Mouser Price"
+F 11 "none" H -2450 2150 50  0001 C CNN "LCSC PN"
+F 12 "none" H -2450 2150 50  0001 C CNN "LCSC Price"
+	1    850  6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  6550 850  6550
+Connection ~ 900  6550
+Wire Wire Line
+	750  6150 750  6200
+Wire Wire Line
+	850  6450 850  6550
 $EndSCHEMATC
