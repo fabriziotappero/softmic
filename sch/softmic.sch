@@ -1524,16 +1524,16 @@ L Connector:USB_C_Receptacle_USB2.0 J1
 U 1 1 5E8C1197
 P 1150 1650
 F 0 "J1" H 1500 2400 50  0000 C CNN
-F 1 "USB-C" H 950 2450 50  0000 C CNN
-F 2 "footprint:USB-10137061-00021LF" H 1300 1650 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1300 1650 50  0001 C CNN
-F 4 "Amphenol" H 1150 1650 50  0001 C CNN "Manufacturer"
-F 5 "10137061-00021LF" H 1150 1650 50  0001 C CNN "MPN"
+F 1 "USB-C Connector" H 950 2450 50  0000 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_GCT_USB4085" H 1300 1650 50  0001 C CNN
+F 3 "https://gct.co/files/drawings/usb4085.pdf" H 1300 1650 50  0001 C CNN
+F 4 "GCT" H 1150 1650 50  0001 C CNN "Manufacturer"
+F 5 "USB4085-GF-A" H 1150 1650 50  0001 C CNN "MPN"
 F 6 "USB Connectors USB 3.1 Receptacle" H 1150 1650 50  0001 C CNN "Description"
-F 7 "609-6444-1-ND" H 1150 1650 50  0001 C CNN "Digikey PN"
-F 8 "$2.26" H 1150 1650 50  0001 C CNN "Digikey Price"
-F 9 "649-10137061-00021LF" H 1150 1650 50  0001 C CNN "Mouser PN"
-F 10 "$2.20" H 1150 1650 50  0001 C CNN "Mouser Price"
+F 7 "2073-USB4085-GF-ACT-ND " H 1150 1650 50  0001 C CNN "Digikey PN"
+F 8 "$1.1" H 1150 1650 50  0001 C CNN "Digikey Price"
+F 9 "none" H 1150 1650 50  0001 C CNN "Mouser PN"
+F 10 "none" H 1150 1650 50  0001 C CNN "Mouser Price"
 F 11 "none" H 1150 1650 50  0001 C CNN "LCSC PN"
 F 12 "none" H 1150 1650 50  0001 C CNN "LCSC Price"
 	1    1150 1650
@@ -3046,10 +3046,10 @@ $EndComp
 Text Notes 10250 4700 0    50   ~ 0
 ESP32 reset
 $Comp
-L Connector:TestPoint P?
+L Connector:TestPoint P10
 U 1 1 5EA549ED
 P 1400 3600
-F 0 "P?" H 1400 3650 50  0001 L CNN
+F 0 "P10" H 1400 3650 50  0001 L CNN
 F 1 "none" V 1500 3600 50  0001 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 1600 3600 50  0001 C CNN
 F 3 "~" H 1600 3600 50  0001 C CNN
@@ -3066,10 +3066,10 @@ F 12 "none" H -1900 -700 50  0001 C CNN "LCSC Price"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:TestPoint P?
+L Connector:TestPoint P7
 U 1 1 5EA53BD8
 P 1400 3300
-F 0 "P?" H 1400 3350 50  0001 L CNN
+F 0 "P7" H 1400 3350 50  0001 L CNN
 F 1 "none" V 1500 3300 50  0001 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 1600 3300 50  0001 C CNN
 F 3 "~" H 1600 3300 50  0001 C CNN
@@ -3092,10 +3092,10 @@ MIC-IN2
 Wire Wire Line
 	1800 3500 1800 3900
 $Comp
-L Connector:TestPoint P?
+L Connector:TestPoint P9
 U 1 1 5EA5476A
 P 1400 3500
-F 0 "P?" H 1400 3550 50  0001 L CNN
+F 0 "P9" H 1400 3550 50  0001 L CNN
 F 1 "none" V 1500 3500 50  0001 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 1600 3500 50  0001 C CNN
 F 3 "~" H 1600 3500 50  0001 C CNN
@@ -3112,10 +3112,10 @@ F 12 "none" H -1900 -800 50  0001 C CNN "LCSC Price"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:TestPoint P?
+L Connector:TestPoint P8
 U 1 1 5EA550E3
 P 1400 3400
-F 0 "P?" H 1400 3450 50  0001 L CNN
+F 0 "P8" H 1400 3450 50  0001 L CNN
 F 1 "none" V 1500 3400 50  0001 L CNN
 F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 1600 3400 50  0001 C CNN
 F 3 "~" H 1600 3400 50  0001 C CNN
