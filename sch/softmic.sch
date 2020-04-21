@@ -21,14 +21,7 @@ F 0 "logo1" H 10700 7075 50  0001 C CNN
 F 1 "Logo_Open_Hardware_Small" H 10700 6575 50  0001 C CNN
 F 2 "Symbol:OSHW-Logo2_7.3x6mm_SilkScreen" H 10700 6800 50  0001 C CNN
 F 3 "~" H 10700 6800 50  0001 C CNN
-F 4 "none" H 10700 6800 50  0001 C CNN "Description"
-F 5 "none" H 10700 6800 50  0001 C CNN "mpn"
-F 6 "none" H 10700 6800 50  0001 C CNN "Mouser"
-F 7 "none" H 10700 6800 50  0001 C CNN "Farnell"
-F 8 "none" H 10700 6800 50  0001 C CNN "Digikey"
-F 9 "none" H 10700 6800 50  0001 C CNN "Alternative"
-F 10 "none" H 10700 6800 50  0001 C CNN "Feed"
-F 11 "none" H 10700 6800 50  0001 C CNN "Logo - not a component"
+F 4 "Logo" H 10700 6800 50  0001 C CNN "Description"
 	1    10700 6800
 	1    0    0    -1  
 $EndComp
@@ -2251,73 +2244,20 @@ Wire Wire Line
 	8250 5500 8250 5600
 Connection ~ 8250 5600
 Wire Wire Line
-	8250 5600 8300 5600
-Text Label 8900 5600 2    50   ~ 0
+	8250 5600 8350 5600
+Text Label 8800 5400 2    50   ~ 0
 OUT2
-$Comp
-L Device:R R30
-U 1 1 5EA8B4EC
-P 8450 5600
-F 0 "R30" V 8550 5450 50  0000 L CNN
-F 1 "2k" V 8550 5650 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8380 5600 50  0001 C CNN
-F 3 "~" H 8450 5600 50  0001 C CNN
-F 4 "none" H 8450 5600 50  0001 C CNN "Manufacturer"
-F 5 "none" H 8450 5600 50  0001 C CNN "MPN"
-F 6 "RES SMD 2K OHM 1% 1/10W 0603" H 8450 5600 50  0001 C CNN "Description"
-F 7 "311-2.00KHRCT-ND" H 8450 5600 50  0001 C CNN "Digikey PN"
-F 8 "$0.10" H 8450 5600 50  0001 C CNN "Digikey Price"
-F 9 "603-RC0603FR-072KL" H 8450 5600 50  0001 C CNN "Mouser PN"
-F 10 "$0.10" H 8450 5600 50  0001 C CNN "Mouser Price"
-F 11 "C163892" H 8450 5600 50  0001 C CNN "LCSC PN"
-F 12 "$0.001847" H 8450 5600 50  0001 C CNN "LCSC Price"
-	1    8450 5600
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8600 5600 8650 5600
-$Comp
-L Device:R R31
-U 1 1 5EAB823C
-P 8450 5800
-F 0 "R31" V 8350 5800 50  0000 L CNN
-F 1 "2k" V 8350 5650 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8380 5800 50  0001 C CNN
-F 3 "~" H 8450 5800 50  0001 C CNN
-F 4 "none" H 8450 5800 50  0001 C CNN "Manufacturer"
-F 5 "none" H 8450 5800 50  0001 C CNN "MPN"
-F 6 "RES SMD 2K OHM 1% 1/10W 0603" H 8450 5800 50  0001 C CNN "Description"
-F 7 "311-2.00KHRCT-ND" H 8450 5800 50  0001 C CNN "Digikey PN"
-F 8 "$0.10" H 8450 5800 50  0001 C CNN "Digikey Price"
-F 9 "603-RC0603FR-072KL" H 8450 5800 50  0001 C CNN "Mouser PN"
-F 10 "$0.10" H 8450 5800 50  0001 C CNN "Mouser Price"
-F 11 "C163892" H 8450 5800 50  0001 C CNN "LCSC PN"
-F 12 "$0.001847" H 8450 5800 50  0001 C CNN "LCSC Price"
-	1    8450 5800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8650 5800 8650 5600
-Connection ~ 8650 5600
-Wire Wire Line
-	8650 5600 8900 5600
-Wire Wire Line
-	8600 5800 8650 5800
-Wire Wire Line
-	8300 5800 8250 5800
 $Comp
 L power:GND #PWR046
 U 1 1 5EB092F6
-P 8250 5850
-F 0 "#PWR046" H 8250 5600 50  0001 C CNN
-F 1 "GND" H 8100 5800 50  0000 C CNN
-F 2 "" H 8250 5850 50  0001 C CNN
-F 3 "" H 8250 5850 50  0001 C CNN
-	1    8250 5850
+P 8500 5850
+F 0 "#PWR046" H 8500 5600 50  0001 C CNN
+F 1 "GND" H 8350 5800 50  0000 C CNN
+F 2 "" H 8500 5850 50  0001 C CNN
+F 3 "" H 8500 5850 50  0001 C CNN
+	1    8500 5850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8250 5800 8250 5850
 Text Notes 6050 -150 0    67   ~ 0
 ESP32 HARDWARE GUIDE\n\nhttps://www.espressif.com/sites/default/files/documentation/esp32_hardware_design_guidelines_en.pdf
 Text Label 9800 5700 0    50   ~ 0
@@ -3082,4 +3022,28 @@ F 12 "$1.18" H 6000 1400 50  0001 C CNN "LCSC Price"
 	1    6000 1400
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_POT_US PT1
+U 1 1 5EA036E0
+P 8500 5600
+F 0 "PT1" H 8432 5600 50  0000 R CNN
+F 1 "200k" H 8432 5645 50  0001 R CNN
+F 2 "Potentiometer_SMD:Potentiometer_Bourns_3224W_Vertical" H 8500 5600 50  0001 C CNN
+F 3 "https://eu.mouser.com/datasheet/2/54/pvg3-1084610.pdf" H 8500 5600 50  0001 C CNN
+F 4 "Trimmer Resistors, SMD 200KOhm 20% 1/4W" H 8500 5600 50  0001 C CNN "Description"
+F 5 "PVG3G204C01R00 " H 8500 5600 50  0001 C CNN "Digikey PN"
+F 6 "$1.57" H 8500 5600 50  0001 C CNN "Digikey Price"
+F 7 "PVG3G204C01R00 " H 8500 5600 50  0001 C CNN "MPN"
+F 8 "Bourns" H 8500 5600 50  0001 C CNN "Manufacturer"
+F 9 "81-PVG3G204C01R00 " H 8500 5600 50  0001 C CNN "Mouser PN"
+F 10 "$1.60" H 8500 5600 50  0001 C CNN "Mouser Price"
+	1    8500 5600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8500 5750 8500 5850
+Wire Wire Line
+	8500 5400 8800 5400
+Wire Wire Line
+	8500 5400 8500 5450
 $EndSCHEMATC
