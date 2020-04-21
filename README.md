@@ -11,6 +11,12 @@ by the microphone itself. The ultimate goal of this microphone is to let the
 microphone take care of the technicalities so that you can concentrate on the 
 artistic aspect of sound recording.
 
+In this picture you can see a the first prototype of *Software-Defined Microphone*.
+
+<p align="center">
+  <img src="https://github.com/fabriziotappero/softmic/blob/master/img/softmic.jpg?raw=true" alt="" width="90%"/>
+</p>
+
 *Software-Defined Microphone* is completely  open source: schematics, circuit 
 simulations, mechanical drawings and software code.
 
