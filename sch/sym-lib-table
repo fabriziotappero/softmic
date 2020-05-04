@@ -5,4 +5,5 @@
   (lib (name NC3MAAH-1)(type Legacy)(uri ${KIPRJMOD}/lib/NC3MAAH-1.lib)(options "")(descr ""))
   (lib (name OLED_0.91_128_32)(type Legacy)(uri ${KIPRJMOD}/lib/OLED_0.91_128_32.lib)(options "")(descr ""))
   (lib (name OPA1671)(type Legacy)(uri ${KIPRJMOD}/lib/OPA1671.lib)(options "")(descr ""))
+  (lib (name ESP32-WROVER-B.16MB)(type Legacy)(uri ${KIPRJMOD}/lib/ESP32-WROVER-B.16MB.lib)(options "")(descr ""))
 )
